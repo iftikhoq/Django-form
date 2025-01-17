@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>        
+            h2{
+                text-align: center;
+            }
+            .form form{
+                display: flex;
+                flex-direction: column;
+                width: 60vw;
+                margin: auto;
+                gap: 20px;
+            }
+            .form input, textarea, select{
+                width: 30%;
+            }
+            .form div{
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+            }
+            button{
+                width: 80%;
+                height: 40px;
+                margin: 20px 10%;
+                background-color:rgb(17, 82, 204);
+            }
+        </style>        
+    </head>
+    <body>
+        <h2>Django form</h2>
+        <div class="form">
+            <form method="post">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
